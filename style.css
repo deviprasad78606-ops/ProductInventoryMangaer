@@ -1,0 +1,403 @@
+
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #202938;
+}
+
+/* Header */
+.topbar {
+    background: white;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.brand-mark {
+    font-size: 30px;
+    background: #e9efff;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.topbar h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #7a8496;
+    margin: 0 0 7px;
+}
+
+.live-tag {
+    margin-left: auto;
+    color: #168354;
+    font-size: 12px;
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 24px;
+}
+
+/* Welcome section */
+.welcome {
+    background: linear-gradient(120deg, #172b56, #315bc4);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome .eyebrow {
+    color: #b7c9ef;
+}
+
+.welcome h2 {
+    font-size: 26px;
+    margin: 8px 0;
+}
+
+.welcome p:last-child {
+    font-size: 13px;
+    color: #d3def4;
+}
+
+.welcome-icon {
+    font-size: 50px;
+}
+
+/* Summary cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 22px 0;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e5e9f0;
+    border-radius: 14px;
+}
+
+.stat-card p {
+    color: #697588;
+    font-size: 13px;
+}
+
+.stat-card strong {
+    display: block;
+    font-size: 26px;
+    margin: 12px 0;
+}
+
+.stat-card span {
+    color: #8993a4;
+    font-size: 11px;
+}
+
+.warning-card strong {
+    color: #d97706;
+}
+
+/* Panels */
+.panel {
+    background: white;
+    padding: 25px;
+    border: 1px solid #e5e9f0;
+    border-radius: 15px;
+    margin-bottom: 22px;
+}
+
+.panel h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.panel-heading,
+.inventory-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+/* Product form */
+.product-form {
+    display: grid;
+    grid-template-columns: 1.4fr 1.1fr 0.8fr 0.7fr auto;
+    gap: 13px;
+    align-items: end;
+}
+
+.product-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #586579;
+}
+
+.product-form input,
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce2ec;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+}
+
+.product-form input:focus,
+.search-box input:focus {
+    border-color: #315bc4;
+}
+
+.primary-button {
+    background: #315bc4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #2549a3;
+}
+
+.form-message {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+/* Search box */
+.search-box {
+    width: 260px;
+}
+
+.search-box input {
+    padding: 12px;
+}
+
+/* Inventory table */
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #f7f8fb;
+}
+
+th {
+    padding: 14px 12px;
+    color: #798497;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 12px;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+.product-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-icon {
+    background: #f0f3ff;
+    padding: 9px;
+    border-radius: 8px;
+}
+
+/* Stock status badges */
+.stock-badge {
+    padding: 6px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.in-stock {
+    background: #e2f8ed;
+    color: #158354;
+}
+
+.low-stock {
+    background: #fff0d7;
+    color: #a96300;
+}
+
+.out-stock {
+    background: #fee6e6;
+    color: #b42323;
+}
+
+/* Buttons */
+.delete-button {
+    background: #fff1f1;
+    color: #c33e43;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 11px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #ffdddd;
+}
+
+.text-button {
+    border: none;
+    background: transparent;
+    color: #c04444;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.text-button:hover {
+    text-decoration: underline;
+}
+
+/* Empty state */
+.empty-state {
+    display: none;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.empty-state.visible {
+    display: block;
+}
+
+.empty-state h3 {
+    font-size: 16px;
+}
+
+.empty-state p {
+    color: #8993a4;
+    font-size: 12px;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+    color: #818b9c;
+    font-size: 12px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #8993a4;
+    font-size: 12px;
+    padding: 15px;
+}
+
+/* Tablet screens */
+@media (max-width: 900px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 560px) {
+    .topbar {
+        padding: 15px;
+    }
+
+    .topbar h1 {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 18px 12px;
+    }
+
+    .welcome {
+        padding: 22px;
+    }
+
+    .welcome h2 {
+        font-size: 20px;
+    }
+
+    .welcome-icon {
+        font-size: 35px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-card strong {
+        font-size: 21px;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .product-form {
+        grid-template-columns: 1fr;
+    }
+
+    .primary-button {
+        width: 100%;
+    }
+
+    .inventory-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+}
