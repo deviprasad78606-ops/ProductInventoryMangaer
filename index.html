@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="brand-mark">📦</div>
+        <div>
+            <p class="eyebrow">INVENTORY WORKSPACE</p>
+            <h1>Product Inventory Manager</h1>
+        </div>
+        <span class="live-tag">● Local Inventory</span>
+    </header>
+
+    <main class="container">
+
+        <!-- Dashboard Introduction -->
+        <section class="welcome">
+            <div>
+                <p class="eyebrow">OVERVIEW</p>
+                <h2>Keep your stock in control.</h2>
+                <p>Manage products, track stock levels, and monitor inventory value.</p>
+            </div>
+            <div class="welcome-icon">📊</div>
+        </section>
+
+        <!-- Inventory Summary -->
+        <section class="stats-grid">
+            <article class="stat-card">
+                <p>Total Products</p>
+                <strong id="total-products">0</strong>
+                <span>Different items</span>
+            </article>
+
+            <article class="stat-card">
+                <p>Total Units in Stock</p>
+                <strong id="total-units">0</strong>
+                <span>Across all products</span>
+            </article>
+
+            <article class="stat-card">
+                <p>Inventory Value</p>
+                <strong id="inventory-value">₹0.00</strong>
+                <span>Price × Quantity</span>
+            </article>
+
+            <article class="stat-card warning-card">
+                <p>Low-Stock Items</p>
+                <strong id="low-stock-count">0</strong>
+                <span>5 units or fewer</span>
+            </article>
+        </section>
+
+        <!-- Add Product Form -->
+        <section class="panel">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">PRODUCT MANAGEMENT</p>
+                    <h2>Add a Product</h2>
+                </div>
+            </div>
+
+            <form id="product-form" class="product-form">
+                <label>
+                    Product Name
+                    <input
+                        type="text"
+                        id="product-name"
+                        name="name"
+                        placeholder="e.g. Wireless Mouse"
+                        maxlength="80"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Category
+                    <input
+                        type="text"
+                        id="product-category"
+                        name="category"
+                        placeholder="e.g. Accessories"
+                        maxlength="50"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Price (₹)
+                    <input
+                        type="number"
+                        id="product-price"
+                        name="price"
+                        min="0.01"
+                        step="0.01"
+                        placeholder="499.00"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Quantity
+                    <input
+                        type="number"
+                        id="product-quantity"
+                        name="quantity"
+                        min="0"
+                        step="1"
+                        placeholder="20"
+                        required
+                    >
+                </label>
+
+                <button type="submit" class="primary-button">
+                    + Add Product
+                </button>
+            </form>
+
+            <p id="form-message" class="form-message" role="status"></p>
+        </section>
+
+        <!-- Product Inventory Table -->
+        <section class="panel">
+            <div class="inventory-heading">
+                <div>
+                    <p class="eyebrow">YOUR CATALOGUE</p>
+                    <h2>Inventory List</h2>
+                </div>
+
+                <label class="search-box">
+                    <span>⌕</span>
+                    <input
+                        type="search"
+                        id="search-input"
+                        placeholder="Search products..."
+                        aria-label="Search products"
+                    >
+                </label>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Stock Status</th>
+                            <th>Value</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="product-table-body">
+                        <!-- Products are inserted by app.js -->
+                    </tbody>
+                </table>
+
+                <div id="empty-state" class="empty-state">
+                    <div>📦</div>
+                    <h3>No Products Found</h3>
+                    <p>Add a product above to get your inventory started.</p>
+                </div>
+            </div>
+
+            <div class="table-footer">
+                <span id="result-count">0 products</span>
+
+                <button
+                    id="clear-all-button"
+                    class="text-button"
+                    type="button"
+                >
+                    Clear All Products
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Built with <strong>TypeScript</strong> ·
+        Data is saved in this browser
+    </footer>
+</body>
+</html>
